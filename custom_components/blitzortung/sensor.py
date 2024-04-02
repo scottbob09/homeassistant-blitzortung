@@ -1,6 +1,6 @@
 import logging
 
-from homeassistant.const import ATTR_ATTRIBUTION, CONF_NAME, LENGTH_KILOMETERS
+from homeassistant.const import ATTR_ATTRIBUTION, CONF_NAME, UnitOfLength_KILOMETERS
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.helpers.device_registry import DeviceEntryType
 
