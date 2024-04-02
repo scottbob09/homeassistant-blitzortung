@@ -7,8 +7,8 @@ import uuid
 from homeassistant.components.geo_location import GeolocationEvent
 from homeassistant.const import (
     ATTR_ATTRIBUTION,
-    UnitOfLength.KILOMETERS,
-    UnitOfLength.MILES,
+    LENGTH_KILOMETERS,
+    LENGTH_MILES,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.dispatcher import (
