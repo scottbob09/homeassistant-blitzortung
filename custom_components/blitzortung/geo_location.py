@@ -7,8 +7,8 @@ import uuid
 from homeassistant.components.geo_location import GeolocationEvent
 from homeassistant.const import (
     ATTR_ATTRIBUTION,
-    UnitOfLength_KILOMETERS,
-    UnitOfLength_MILES,
+    UnitOfLength.KILOMETERS,
+    UnitOfLength.MILES,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.dispatcher import (
@@ -98,9 +98,9 @@ class BlitzortungEventManager:
         self._window_seconds = window_seconds
 
         if hass.config.units == IMPERIAL_SYSTEM:
-            self._unit = UnitOfLength_MILES
+            self._unit = UnitOfLength.MILES
         else:
-            self._unit = UnitOfLength_KILOMETERS
+            self._unit = UnitOfLength.KILOMETERS
 
     def lightning_cb(self, lightning):
         _LOGGER.debug("geo_location lightning: %s", lightning)
