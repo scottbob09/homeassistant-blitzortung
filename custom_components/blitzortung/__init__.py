@@ -16,8 +16,8 @@ from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.util.unit_system import IMPERIAL_SYSTEM
 from homeassistant.util.unit_conversion import DistanceConverter
 from homeassistant.const import (
-    LENGTH_KILOMETERS,
-    LENGTH_MILES,
+    UnitOfLength_KILOMETERS,
+    UnitOfLength_MILES,
 )
 from . import const
 from .const import (
