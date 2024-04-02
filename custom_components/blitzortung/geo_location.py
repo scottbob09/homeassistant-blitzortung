@@ -98,9 +98,9 @@ class BlitzortungEventManager:
         self._window_seconds = window_seconds
 
         if hass.config.units == IMPERIAL_SYSTEM:
-            self._unit = UnitOfLength.MILES
+            self._unit = LENGTH_MILES
         else:
-            self._unit = UnitOfLength.KILOMETERS
+            self._unit = LENGTH_KILOMETERS
 
     def lightning_cb(self, lightning):
         _LOGGER.debug("geo_location lightning: %s", lightning)
