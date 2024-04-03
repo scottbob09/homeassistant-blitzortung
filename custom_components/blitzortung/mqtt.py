@@ -282,7 +282,7 @@ class MQTT:
                     continue
 
             self.hass.async_create_background_task(
-                subscription.callback,
+                entry.async_create_task,
                 Message(
                     msg.topic,
                     payload,
