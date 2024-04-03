@@ -282,8 +282,7 @@ class MQTT:
                     continue
 
             self.hass.async_create_background_task(
-                entry.async_create_task,
-                Message(
+                    Message(
                     msg.topic,
                     payload,
                     msg.qos,
