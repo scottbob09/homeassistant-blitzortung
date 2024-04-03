@@ -281,7 +281,7 @@ class MQTT:
                     )
                     continue
 
-            self.hass.async_run_job(
+            self.hass.async_create_background_task(
                 subscription.callback,
                 Message(
                     msg.topic,
