@@ -57,7 +57,7 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry):
     hass.data.setdefault(DOMAIN, {})
     config = hass.data[DOMAIN].get("config") or {}
 
-    latitude = config_entry.options.get(CONF_LATITUDE, hass.config.latitude)
+    latitude = config_entry.options.get(CONF_LATITUDE, hass.config.UnitOfLength.latitude)
     longitude = config_entry.options.get(CONF_LONGITUDE, hass.config.longitude)
     radius = config_entry.options.get(CONF_RADIUS, DEFAULT_RADIUS)
     max_tracked_lightnings = config_entry.options.get(
