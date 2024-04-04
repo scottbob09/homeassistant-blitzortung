@@ -33,14 +33,14 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
     coordinator = hass.data[DOMAIN][config_entry.entry_id]
     if not coordinator.max_tracked_lightnings:
         return
-
+    await coordinator.async_config_entry_first_refresh()
     manager = BlitzortungEventManager(
         hass,
         async_add_entities,
         coordinator.max_tracked_lightnings,
         coordinator.time_window_seconds,
     )
-   await coordinator.async_config_entry_first_refresh()
+   
     coordinator.register_lightning_receiver(manager.lightning_cb)
     coordinator.register_on_tick(manager.tick)
 
