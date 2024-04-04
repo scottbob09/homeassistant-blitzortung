@@ -40,7 +40,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
         coordinator.max_tracked_lightnings,
         coordinator.time_window_seconds,
     )
-
+   await coordinator.async_config_entry_first_refresh()
     coordinator.register_lightning_receiver(manager.lightning_cb)
     coordinator.register_on_tick(manager.tick)
 
