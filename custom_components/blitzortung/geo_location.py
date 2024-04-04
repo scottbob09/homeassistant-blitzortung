@@ -8,7 +8,7 @@ from homeassistant.components.geo_location import GeolocationEvent
 from homeassistant.const import (
     ATTR_ATTRIBUTION,
     UnitOfLength.KILOMETERS,
-    LENGTH_MILES,
+    UnitOfLength.MILES,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.dispatcher import (
