@@ -282,7 +282,7 @@ class MQTT:
                     continue
 
             self.hass.async_create_background_task(
-                    Blitzortung,
+                    blitzortung,
                     Message(
                     msg.topic,
                     payload,
